@@ -10,4 +10,14 @@ describe("Testing Account Bank", () => {
 
         expect(account.Balance).toBe(expected);
     });
+
+    it("Testing credit method", () => {
+        const beginningBalance = 11.99;
+        const creditAmount = 4.55;
+        const expected = 16.54;
+        const account = new BankAccount("Ryan Drumond", beginningBalance);
+        account.Credit(creditAmount);
+
+        expect(account.Balance).toBe(expected);
+    });
 })
